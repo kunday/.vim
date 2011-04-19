@@ -13,8 +13,6 @@ set wrap
 set ruler
 set directory=/tmp
 set laststatus=2
-set cursorline
-set cursorcolumn
 
 set statusline=
 set statusline+=%<\                       " cut at start
