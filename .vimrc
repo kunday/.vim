@@ -2,7 +2,14 @@ colorscheme molokai
 
 syntax on
 
+filetype on
+filetype indent on
+filetype plugin on
+
+compiler ruby
+
 set hlsearch
+set nocompatible
 set number
 set showmatch
 set incsearch
