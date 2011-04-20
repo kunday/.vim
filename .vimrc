@@ -46,10 +46,10 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
-"Highlight too-long lines
-autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
-highlight LineLengthError ctermbg=red guibg=red
-autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
+""Highlight too-long lines
+"autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
+"highlight LineLengthError ctermbg=red guibg=red
+"autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
 
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>fb :FufBuffer<CR>
