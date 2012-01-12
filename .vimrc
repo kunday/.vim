@@ -21,6 +21,8 @@ set ruler
 set directory=/tmp
 set laststatus=2
 set cursorline
+set tabstop=2
+set shiftwidth=2
 
 set statusline=
 set statusline+=%<\                       " cut at start
@@ -61,3 +63,4 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>fb :FufBuffer<CR>
 map <silent> <LocalLeader>fl :FufLine<CR>
+map <silent> <LocalLeader>nh :noh<CR>
