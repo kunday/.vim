@@ -71,3 +71,4 @@ nmap <silent> <Leader>cf :call RunCucumberCurrentFileConque()<CR>
 nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
 nmap <silent> <Leader>rr :call RunRakeConque()<CR>
 nmap <silent> <Leader>rp :call RunLastConqueCommand()<CR>
+nmap <F8> :TagbarToggle<CR>
