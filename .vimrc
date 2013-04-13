@@ -10,7 +10,6 @@ compiler ruby
 
 set hlsearch
 set nocompatible
-set number
 set showmatch
 set incsearch
 set ignorecase
@@ -21,6 +20,9 @@ set ruler
 set directory=/tmp
 set laststatus=2
 set cursorline
+set mouse=a
+set shiftwidth=2
+set visualbell
 
 set statusline=
 set statusline+=%<\                       " cut at start
@@ -61,3 +63,11 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>fb :FufBuffer<CR>
 map <silent> <LocalLeader>fl :FufLine<CR>
+let g:ruby_conque_rspec_runner='rspec'
+let g:ruby_conque_cucumber_runner='cucumber'
+nmap <silent> <Leader>rf :call RunRspecCurrentFileConque()<CR>
+nmap <silent> <Leader>rl :call RunRspecCurrentLineConque()<CR>
+nmap <silent> <Leader>cf :call RunCucumberCurrentFileConque()<CR>
+nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
+nmap <silent> <Leader>rr :call RunRakeConque()<CR>
+nmap <silent> <Leader>rp :call RunLastConqueCommand()<CR>
