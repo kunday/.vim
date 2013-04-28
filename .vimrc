@@ -10,7 +10,6 @@ compiler ruby
 
 set hlsearch
 set nocompatible
-set number
 set showmatch
 set incsearch
 set ignorecase
@@ -23,6 +22,9 @@ set laststatus=2
 set cursorline
 set tabstop=2
 set shiftwidth=2
+set mouse=a
+set shiftwidth=2
+set visualbell
 
 set statusline=
 set statusline+=%<\                       " cut at start
@@ -74,6 +76,13 @@ let vimclojure#WantNailgun         = 1
 let vimclojure#SplitPos            = "right"
 let vimclojure#SplitSize           = 80
 set expandtab
-set tabstop=2
-retab
-set shiftwidth=2
+let g:ruby_conque_rspec_runner='rspec'
+let g:ruby_conque_cucumber_runner='cucumber'
+nmap <silent> <Leader>rf :call RunRspecCurrentFileConque()<CR>
+nmap <silent> <Leader>rl :call RunRspecCurrentLineConque()<CR>
+nmap <silent> <Leader>cf :call RunCucumberCurrentFileConque()<CR>
+nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
+nmap <silent> <Leader>rr :call RunRakeConque()<CR>
+nmap <silent> <Leader>rp :call RunLastConqueCommand()<CR>
+nmap <F8> :TagbarToggle<CR>
+call pathogen#infect()
