@@ -64,3 +64,16 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>fb :FufBuffer<CR>
 map <silent> <LocalLeader>fl :FufLine<CR>
 map <silent> <LocalLeader>nh :noh<CR>
+let vimclojure#WantNailgun = 1
+map <silent> <LocalLeader>nh :noh<CR>
+map <space> \ef
+let vimclojure#HighlightBuiltins   = 1
+let vimclojure#DynamicHighlighting = 1
+let vimclojure#ParenRainbow        = 1
+let vimclojure#WantNailgun         = 1
+let vimclojure#SplitPos            = "right"
+let vimclojure#SplitSize           = 80
+set expandtab
+set tabstop=2
+retab
+set shiftwidth=2
