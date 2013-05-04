@@ -1,4 +1,4 @@
-colorscheme molokai
+colorscheme ironman
 
 syntax on
 
@@ -86,3 +86,4 @@ nmap <silent> <Leader>rr :call RunRakeConque()<CR>
 nmap <silent> <Leader>rp :call RunLastConqueCommand()<CR>
 nmap <F8> :TagbarToggle<CR>
 call pathogen#infect()
+au FileType json setlocal equalprg=python\ -m\ json.tool
