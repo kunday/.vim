@@ -1,4 +1,4 @@
-colorscheme ironman
+colorscheme wombat256
 
 syntax on
 
@@ -30,8 +30,6 @@ set statusline=
 set statusline+=%<\                       " cut at start
 set statusline+=%2*[%n%H%M%R%W]%*\        " buffer number, and flags
 set statusline+=%f\                    	  " relative path
-set statusline+=%8*%{rvm#statusline()}
-set statusline+=%#ErrorMsg#%{fugitive#statusline()}%#StatusLine#
 set statusline+=%=                        " seperate between right- and left-aligned
 set statusline+=%1*%y%*%*\                " file type
 set statusline+=%10(L(%l/%L)%)\           " line
@@ -78,12 +76,13 @@ let vimclojure#SplitSize           = 80
 set expandtab
 let g:ruby_conque_rspec_runner='rspec'
 let g:ruby_conque_cucumber_runner='cucumber'
-nmap <silent> <Leader>rf :call RunRspecCurrentFileConque()<CR>
+"nmap <silent> <Leader>rf :call RunRspecCurrentFileConque()<CR>
 nmap <silent> <Leader>rl :call RunRspecCurrentLineConque()<CR>
 nmap <silent> <Leader>cf :call RunCucumberCurrentFileConque()<CR>
 nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
 nmap <silent> <Leader>rr :call RunRakeConque()<CR>
 nmap <silent> <Leader>rp :call RunLastConqueCommand()<CR>
 nmap <F8> :TagbarToggle<CR>
+nmap <silet> <Leader> t :call CtrlP <CR>
 call pathogen#infect()
 au FileType json setlocal equalprg=python\ -m\ json.tool
