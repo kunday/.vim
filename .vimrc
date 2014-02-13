@@ -64,25 +64,8 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>fb :FufBuffer<CR>
 map <silent> <LocalLeader>fl :FufLine<CR>
 map <silent> <LocalLeader>nh :noh<CR>
-let vimclojure#WantNailgun = 1
 map <silent> <LocalLeader>nh :noh<CR>
 map <space> \ef
-let vimclojure#HighlightBuiltins   = 1
-let vimclojure#DynamicHighlighting = 1
-let vimclojure#ParenRainbow        = 1
-let vimclojure#WantNailgun         = 1
-let vimclojure#SplitPos            = "right"
-let vimclojure#SplitSize           = 80
 set expandtab
-let g:ruby_conque_rspec_runner='rspec'
-let g:ruby_conque_cucumber_runner='cucumber'
-"nmap <silent> <Leader>rf :call RunRspecCurrentFileConque()<CR>
-nmap <silent> <Leader>rl :call RunRspecCurrentLineConque()<CR>
-nmap <silent> <Leader>cf :call RunCucumberCurrentFileConque()<CR>
-nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
-nmap <silent> <Leader>rr :call RunRakeConque()<CR>
-nmap <silent> <Leader>rp :call RunLastConqueCommand()<CR>
-nmap <F8> :TagbarToggle<CR>
-nmap <silet> <Leader> t :call CtrlP <CR>
 call pathogen#infect()
 au FileType json setlocal equalprg=python\ -m\ json.tool
