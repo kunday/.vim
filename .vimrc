@@ -21,6 +21,8 @@ Plugin 'taskpaper.vim'
 Plugin 'Gundo'
 Plugin 'rails.vim'
 Plugin 'ruby.vim'
+Plugin 'Align'
+Plugin 'AutoAlign'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
