@@ -1,6 +1,5 @@
 Conque-Shell
 SuperTab
-Vundle.vim
 ctrlp.vim
 nerdtree
 taskpaper.vim
@@ -9,3 +8,9 @@ vim-fugitive
 vim-gitgutter
 vim-sensible
 vim-surround
+FuzzyFinder/
+L9/
+Tagbar/
+ack.vim/
+bufexplorer.zip/
+comments.vim/

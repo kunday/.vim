@@ -2,6 +2,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'L9'
+Plugin 'comments.vim'
+Plugin 'FuzzyFinder'
+Plugin 'Tagbar'
+Plugin 'ack.vim'
+Plugin 'bufexplorer.zip'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
