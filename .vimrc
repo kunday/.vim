@@ -23,6 +23,7 @@ Plugin 'rails.vim'
 Plugin 'ruby.vim'
 Plugin 'Align'
 Plugin 'AutoAlign'
+Plugin 'eruby.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
