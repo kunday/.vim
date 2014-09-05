@@ -11,5 +11,3 @@ warnings, it's safe to ignore them for now. Now run
 This will take a few minutes.
 
 Once this is complete relaunch vim.
-
-defaults write org.vim.MacVim MMZoomBoth 1
