@@ -25,6 +25,8 @@ Plugin 'Align'
 Plugin 'AutoAlign'
 Plugin 'eruby.vim'
 Plugin 'snipmate-snippets'
+Plugin 'wombat256.vim'
+Plugin 'molokai'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
