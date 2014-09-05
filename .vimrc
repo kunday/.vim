@@ -19,6 +19,7 @@ Plugin 'vim-scripts/Conque-Shell'
 Plugin 'SuperTab'
 Plugin 'taskpaper.vim'
 Plugin 'Gundo'
+Plugin 'rails.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
