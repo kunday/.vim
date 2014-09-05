@@ -28,6 +28,7 @@ Plugin 'snipmate-snippets'
 Plugin 'wombat256.vim'
 Plugin 'molokai'
 Plugin 'Color-Sampler-Pack'
+Plugin 'cecutil'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -96,6 +97,5 @@ map <silent> <LocalLeader>nh :noh<CR>
 map <silent> <LocalLeader>nh :noh<CR>
 map <space> \ef
 set expandtab
-call pathogen#infect()
 autocmd FileType gitcommit DiffGitCached | wincmd p
 au FileType json setlocal equalprg=python\ -m\ json.tool
