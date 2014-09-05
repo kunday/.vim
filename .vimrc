@@ -20,6 +20,7 @@ Plugin 'SuperTab'
 Plugin 'taskpaper.vim'
 Plugin 'Gundo'
 Plugin 'rails.vim'
+Plugin 'ruby.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
