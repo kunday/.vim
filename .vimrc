@@ -27,6 +27,7 @@ Plugin 'eruby.vim'
 Plugin 'snipmate-snippets'
 Plugin 'wombat256.vim'
 Plugin 'molokai'
+Plugin 'Color-Sampler-Pack'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
