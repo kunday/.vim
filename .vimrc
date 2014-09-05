@@ -96,4 +96,5 @@ map <silent> <LocalLeader>nh :noh<CR>
 map <space> \ef
 set expandtab
 call pathogen#infect()
+autocmd FileType gitcommit DiffGitCached | wincmd p
 au FileType json setlocal equalprg=python\ -m\ json.tool
