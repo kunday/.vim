@@ -1,10 +1,23 @@
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/Conque-Shell'
+Plugin 'SuperTab'
+Plugin 'taskpaper.vim'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 colorscheme wombat256
 
 syntax on
-
-filetype on
-filetype indent on
-filetype plugin on
 
 compiler ruby
 
