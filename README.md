@@ -12,7 +12,4 @@ This will take a few minutes.
 
 Once this is complete relaunch vim.
 
-## Macvim fixes.
-
-To fix the maximise button, please use
 defaults write org.vim.MacVim MMZoomBoth 1
