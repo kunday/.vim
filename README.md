@@ -10,6 +10,9 @@ warnings, it's safe to ignore them for now. Now run
 
 This will take a few minutes.
 
-Please copy the .vimrc to your home directory.
-to fix the maximise button, please use
+Once this is complete relaunch vim.
+
+## Macvim fixes.
+
+To fix the maximise button, please use
 defaults write org.vim.MacVim MMZoomBoth 1
