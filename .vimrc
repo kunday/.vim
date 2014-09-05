@@ -18,6 +18,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'SuperTab'
 Plugin 'taskpaper.vim'
+Plugin 'Gundo'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
