@@ -30,7 +30,7 @@ Plugin 'molokai'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme wombat256
+colorscheme wombat256mod
 
 syntax on
 
