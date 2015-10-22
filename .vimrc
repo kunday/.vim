@@ -9,6 +9,8 @@ Plugin 'Tagbar'
 Plugin 'ack.vim'
 Plugin 'bufexplorer.zip'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fireplace'
+Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
@@ -32,7 +34,7 @@ Plugin 'cecutil'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme wombat256mod
+colorscheme Tomorrow-Night-Eighties
 
 syntax on
 
