@@ -31,6 +31,8 @@ Plugin 'wombat256.vim'
 Plugin 'molokai'
 Plugin 'Color-Sampler-Pack'
 Plugin 'cecutil'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'benmills/vimux'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
