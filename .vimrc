@@ -33,6 +33,10 @@ Plugin 'Color-Sampler-Pack'
 Plugin 'cecutil'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'benmills/vimux'
+Plugin 'spolu/dwm.vim'
+Plugin 'chrisbra/csv.vim'
+Plugin 'rainbow_csv.vim'
+Plugin 'VimClojure'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
