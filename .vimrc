@@ -8,15 +8,11 @@ Plugin 'FuzzyFinder'
 Plugin 'Tagbar'
 Plugin 'ack.vim'
 Plugin 'bufexplorer.zip'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-fireplace'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'SuperTab'
 Plugin 'taskpaper.vim'
@@ -32,11 +28,15 @@ Plugin 'molokai'
 Plugin 'Color-Sampler-Pack'
 Plugin 'cecutil'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'benmills/vimux'
-Plugin 'spolu/dwm.vim'
-Plugin 'chrisbra/csv.vim'
-Plugin 'rainbow_csv.vim'
-Plugin 'VimClojure'
+Plugin 'kien/rainbow_parentheses.vim'
+
+Plugin 'tpope/vim-salve'
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -107,3 +107,33 @@ map <space> \ef
 set expandtab
 autocmd FileType gitcommit DiffGitCached | wincmd p
 au FileType json setlocal equalprg=python\ -m\ json.tool
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+let g:rbpt_max            = 16
+let g:rbpt_loadcmd_toggle = 0
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
