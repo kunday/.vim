@@ -60,7 +60,6 @@ set laststatus=2
 set cursorline
 set tabstop=2
 set shiftwidth=2
-set mouse=a
 set shiftwidth=2
 set visualbell
 
