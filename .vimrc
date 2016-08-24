@@ -1,6 +1,7 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'L9'
 Plugin 'comments.vim'
@@ -12,6 +13,8 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
+Plugin 'htacg/tidy-html5'
+Bundle 'KurtPreston/vim-autoformat-rails'
 Plugin 'airblade/vim-gitgutter'
 Bundle 'lrvick/Conque-Shell'
 Plugin 'SuperTab'
@@ -37,14 +40,13 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'guns/vim-clojure-static'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mhinz/vim-startify'
 Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Bright
 syntax on
 compiler ruby
 
@@ -59,20 +61,21 @@ set wrap
 set ruler
 set directory=/tmp
 set laststatus=2
-set cursorline
 set tabstop=2
 set shiftwidth=2
 set shiftwidth=2
 set tabstop=2
 set visualbell
-set number
 
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>fb :FufBuffer<CR>
-map <silent> <LocalLeader>fl :FufLine<CR>
 map <silent> <LocalLeader>nh :noh<CR>
 map <silent> <LocalLeader>nh :noh<CR>
 map <space> \ef
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 set expandtab
 autocmd FileType gitcommit DiffGitCached | wincmd p
@@ -113,10 +116,12 @@ au Syntax * RainbowParenthesesLoadBraces
 " CtrlP related stuff
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = {
+      \ 'dir': '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|virtual_env$'
+      \ }
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "Conqueterm related stuff
 map <silent> <LocalLeader>cq :ConqueTermSplit bash -login<CR>
@@ -126,3 +131,10 @@ let g:ConqueTerm_TERM = 'xterm-256color'
 
 highlight ExtraWhitespace ctermbg=yellow
 autocmd BufWritePre * StripWhitespace
+
+"clojure syntax keywords
+let g:clojure_syntax_keywords = {
+      \ 'clojureMacro': ["defproject", "defcustom"],
+      \ 'clojureFunc': ["string/join", "string/replace"]
+      \ }
+
