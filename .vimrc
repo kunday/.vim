@@ -42,6 +42,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'guns/vim-clojure-static'
 Plugin 'mhinz/vim-startify'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'malithsen/trello-vim'
+Plugin 'nkantar/GHT.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'mattn/webapi-vim'
+Plugin 'keith/travis.vim'
+Plugin 'valloric/youcompleteme'
+Plugin 'shemerey/vim-peepopen'
+Plugin 'VimClojure'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -117,7 +125,7 @@ au Syntax * RainbowParenthesesLoadBraces
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 let g:ctrlp_custom_ignore = {
-      \ 'dir': '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|virtual_env$'
+      \ 'dir': '\.git$\|\.hg$\|\.svn$\|target$\|bower_components$\|dist$\|node_modules$\|virtual_env$'
       \ }
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -138,3 +146,5 @@ let g:clojure_syntax_keywords = {
       \ 'clojureFunc': ["string/join", "string/replace"]
       \ }
 
+nmap <silent> ;i :call GHT('issue')<CR>
+nmap <silent> ;p :call GHT('pr')<CR>
