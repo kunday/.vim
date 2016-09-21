@@ -15,6 +15,7 @@ set shiftwidth=2
 set shiftwidth=2
 set tabstop=2
 set visualbell
+set mouse=a
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -29,6 +30,7 @@ Plugin 'bufexplorer.zip'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'htacg/tidy-html5'
 Bundle 'KurtPreston/vim-autoformat-rails'
 Plugin 'SuperTab'
@@ -56,11 +58,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'molokai'
+Plugin 'jacoborus/tender'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme molokai
+colorscheme tender
 syntax on
 compiler ruby
 
@@ -118,3 +121,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep     = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='murmur'
+if (has("termguicolors"))
+  set termguicolors
+endif
