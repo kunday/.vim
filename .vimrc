@@ -124,3 +124,7 @@ let g:airline_theme='murmur'
 if (has("termguicolors"))
   set termguicolors
 endif
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
