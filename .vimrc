@@ -52,24 +52,31 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-Plugin 'mhinz/vim-startify'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'molokai'
 Plugin 'jacoborus/tender'
+Plugin 'lambdalisue/vim-unified-diff'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'farseer90718/vim-taskwarrior'
+Plugin 'keith/rspec.vim'
+Plugin 'cburroughs/pep8.py'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme tender
+colorscheme Tomorrow-Night-Eighties
 syntax on
 compiler ruby
 
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>fb :FufBuffer<CR>
 map <silent> <LocalLeader>nh :noh<CR>
+map <silent> <LocalLeader>q :qa<CR>
+map <silent> <LocalLeader>wq :wqa<CR>
+map <silent> <LocalLeader>tw :TW<CR>
 map <space> \ef
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -118,8 +125,6 @@ let g:ctrlp_working_path_mode = 'ra'
 highlight ExtraWhitespace ctermbg=yellow
 autocmd BufWritePre * StripWhitespace
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep     = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='murmur'
 if (has("termguicolors"))
   set termguicolors
@@ -128,3 +133,17 @@ endif
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+set diffexpr=unified_diff#diffexpr()
+
+" configure with the followings (default values are shown below)
+let unified_diff#executable = 'git'
+let unified_diff#arguments = [
+			\   'diff', '--no-index', '--no-color', '--no-ext-diff', '--unified=0',
+			\ ]
+let unified_diff#iwhite_arguments = [
+			\   '--ignore--all-space',
+			\ ]
+let g:task_rc_override = 'rc.defaultwidth=0'
+let NERDTreeIgnore = ['\.pyc$']
+let g:rspec_command = "!spec {spec}"
