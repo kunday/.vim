@@ -15,7 +15,7 @@ set shiftwidth=2
 set shiftwidth=2
 set tabstop=2
 set visualbell
-set mouse=a
+set mouse-=a
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -48,7 +48,6 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-salve'
-Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
@@ -57,10 +56,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'molokai'
-Plugin 'jacoborus/tender'
-Plugin 'lambdalisue/vim-unified-diff'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'farseer90718/vim-taskwarrior'
 Plugin 'keith/rspec.vim'
 Plugin 'cburroughs/pep8.py'
 
