@@ -3,8 +3,6 @@ install:
 	ln -s ~/.vim/.vimrc ~/.vimrc
 	ln -s ~/.vim/.gvimrc ~/.gvimrc
 	defaults write org.vim.MacVim MMZoomBoth 1
-	python ~/.vim/bundle/trello-vim/INSTALL.py
-	cd ~/.vim/bundle/YouCompleteMe && ./install.py
 clean:
 	rm -rf bundle/
 	rm -rf ~/.vimrc
